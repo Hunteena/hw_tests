@@ -31,10 +31,6 @@ tests_for_add_new_doc = [
 
 
 class TestSecretary:
-    def setup(self):
-        print()
-        print(f"{' Next test ':=^30}")
-
     @pytest.mark.parametrize('user_doc_number, expected', tests_for_doc_owner)
     @patch('builtins.input')
     def test_get_doc_owner_name(self, mock_input, user_doc_number, expected):
